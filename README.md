@@ -36,12 +36,13 @@
 
 ## 📁 Project Structure
 
+```bash
 📁 public/
 📁 src/
   ├── index.js        # Entry point
   ├── index.css       # Basic styling
   └── App components  # All components in one file for simplicity
-
+```
 ---
 
 🧠 What I Learned
