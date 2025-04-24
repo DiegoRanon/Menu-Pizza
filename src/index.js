@@ -58,15 +58,13 @@ function App() {
 }
 
 function Pizza({ name, ingredient, photoName, price, soldOut }) {
-  if (soldOut) return null;
-
   return (
-    <div className="pizza">
+    <div className={`pizza ${soldOut ? "sold-out" : ""}`}>
       <img src={photoName} alt="Pizza spinaci" />
       <div>
         <h3>{name}</h3>
         <p>{ingredient}</p>
-        <span>Price : {price}</span>
+        <span>{soldOut ? "Sold out" : price}</span>
       </div>
     </div>
   );
