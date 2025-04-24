@@ -41,11 +41,11 @@
 📁 src/
   ├── index.js        # Entry point
   ├── index.css       # Basic styling
-  └── App components  # All components in one file for simplicity
+  └── App components  # All components in one file for simplicit
 ```
 ---
 
-🧠 What I Learned
+## 🧠 What I Learned
 Structuring UI using reusable components
 
 Mapping arrays to dynamically render content
@@ -56,7 +56,7 @@ Creating simple UI logic based on date/time
 
 Handling static assets like images in React
 
-👨‍💻 Author
+## 👨‍💻 Author
 Diego Ranon
 React Developer in training, passionate about building interactive and responsive web applications.
 LinkedIn (https://www.linkedin.com/in/diego-ranon-986b0120a/)
