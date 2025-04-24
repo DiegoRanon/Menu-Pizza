@@ -57,7 +57,9 @@ function App() {
   );
 }
 
-function Pizza({ name, ingredient, photoName, price }) {
+function Pizza({ name, ingredient, photoName, price, soldOut }) {
+  if (soldOut) return null;
+
   return (
     <div className="pizza">
       <img src={photoName} alt="Pizza spinaci" />
@@ -83,7 +85,7 @@ function Menu() {
     <div className="menu">
       <h2>Our menu</h2>
       {/* Helps to know if there are no pizzas */}
-      {pizzaData && (
+      {pizzaData ? (
         <ul className="pizzas">
           {pizzaData.map((p) => {
             return (
@@ -92,10 +94,13 @@ function Menu() {
                 ingredient={p.ingredients}
                 photoName={p.photoName}
                 price={p.price}
+                soldOut={p.soldOut}
               />
             );
           })}
         </ul>
+      ) : (
+        <span>There are no pizzas in the menu.</span>
       )}
       {/* <Pizza
         name="Pizza Spinaci"
@@ -113,14 +118,17 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
-  // Learning short-circuiting
   return (
     <footer className="footer">
-      {isOpen && (
+      {isOpen ? (
         <div className="order">
           <p>We're open until {closeHour}.</p>
           <button className="btn">Order</button>
         </div>
+      ) : (
+        <p>
+          We're happy to welcome you between {openHour}:00 to {closeHour}:00.
+        </p>
       )}
     </footer>
   );
