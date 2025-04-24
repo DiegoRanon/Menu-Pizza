@@ -82,17 +82,21 @@ function Menu() {
   return (
     <div className="menu">
       <h2>Our menu</h2>
-      {pizzaData.map((p) => {
-        return (
-          <Pizza
-            name={p.name}
-            ingredient={p.ingredients}
-            photoName={p.photoName}
-            price={p.price}
-          />
-        );
-      })}
-
+      {/* Helps to know if there are no pizzas */}
+      {pizzaData && (
+        <ul className="pizzas">
+          {pizzaData.map((p) => {
+            return (
+              <Pizza
+                name={p.name}
+                ingredient={p.ingredients}
+                photoName={p.photoName}
+                price={p.price}
+              />
+            );
+          })}
+        </ul>
+      )}
       {/* <Pizza
         name="Pizza Spinaci"
         ingredient="Tomato, mozarella, spinach, and ricotta cheese"
@@ -109,7 +113,17 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
-  return <footer className="footer">{isOpen && <p>Open</p>}</footer>;
+  // Learning short-circuiting
+  return (
+    <footer className="footer">
+      {isOpen && (
+        <div className="order">
+          <p>We're open until {closeHour}.</p>
+          <button className="btn">Order</button>
+        </div>
+      )}
+    </footer>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
