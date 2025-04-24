@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🍕 Pizza-Factory-Co.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Pizza-Factory-Co.** is a simple React.js application that simulates a pizza menu for a fictional restaurant. This project was created to **practice the fundamentals of React**, including components, props, conditional rendering, dynamic lists, and basic logic handling.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 📋 **Dynamic Menu** – Displays a list of pizzas from a static dataset
+- 🧩 **Component-Based Architecture** – Functional components like `Menu`, `Pizza`, `Footer`, and `Order`
+- ❌ **Sold Out State** – Visually indicates when a pizza is no longer available
+- ⏰ **Conditional Rendering by Time** – Footer displays different messages based on opening hours
+- 💻 **Responsive Layout** *(basic styling applied via CSS)*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Technologies Used
 
-### `npm test`
+- **React.js** – Frontend framework
+- **JavaScript (ES6)** – Modern JS syntax
+- **CSS** – Basic styling (see `index.css`)
+- **JSX** – Templating within React components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🎯 Project Goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Reinforce understanding of:
+  - React component structure
+  - `props` and dynamic data rendering
+  - Conditional rendering and list mapping
+  - Basic date/time logic in the UI
+- Build a lightweight UI without using advanced frameworks or routing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```bash
+📁 public/
+📁 src/
+  ├── index.js        # Entry point
+  ├── index.css       # Basic styling
+  └── App components  # All components in one file for simplicity
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🧠 What I Learned
+Structuring UI using reusable components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Mapping arrays to dynamically render content
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Passing and destructuring props
 
-## Learn More
+Creating simple UI logic based on date/time
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Handling static assets like images in React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👨‍💻 Author
+Diego Ranon
+React Developer in training, passionate about building interactive and responsive web applications.
+LinkedIn (https://www.linkedin.com/in/diego-ranon-986b0120a/)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Want me to:
+- Add GitHub badges (React, CSS, MIT License, etc.)?
+- Create a French version?
+- Help split your components into separate files for scalability?
 
-### Analyzing the Bundle Size
+Let me know, I’ve got you!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
