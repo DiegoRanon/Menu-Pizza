@@ -86,19 +86,25 @@ function Menu() {
       <h2>Our menu</h2>
       {/* Helps to know if there are no pizzas */}
       {pizzaData ? (
-        <ul className="pizzas">
-          {pizzaData.map((p) => {
-            return (
-              <Pizza
-                name={p.name}
-                ingredient={p.ingredients}
-                photoName={p.photoName}
-                price={p.price}
-                soldOut={p.soldOut}
-              />
-            );
-          })}
-        </ul>
+        <>
+          <p>
+            Authentic Ialian cuisine. 6 creative dishes to choose from. All from
+            our stone oven, all organic, all delicious.
+          </p>
+          <ul className="pizzas">
+            {pizzaData.map((p) => {
+              return (
+                <Pizza
+                  name={p.name}
+                  ingredient={p.ingredients}
+                  photoName={p.photoName}
+                  price={p.price}
+                  soldOut={p.soldOut}
+                />
+              );
+            })}
+          </ul>
+        </>
       ) : (
         <span>There are no pizzas in the menu.</span>
       )}
@@ -121,16 +127,22 @@ function Footer() {
   return (
     <footer className="footer">
       {isOpen ? (
-        <div className="order">
-          <p>We're open until {closeHour}.</p>
-          <button className="btn">Order</button>
-        </div>
+        <Order openHour={openHour} closedHour={closeHour} />
       ) : (
         <p>
           We're happy to welcome you between {openHour}:00 to {closeHour}:00.
         </p>
       )}
     </footer>
+  );
+}
+
+function Order({ openHour, closedHour }) {
+  return (
+    <div className="order">
+      <p>We're open until {closedHour}.</p>
+      <button className="btn">Order</button>
+    </div>
   );
 }
 
